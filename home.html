@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>My image gallery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/home_page.css">
+    </head>
+    <body>
+       <div class="content">
+           <header>
+               <img class="header_img" src="texture/heading.png"/>
+           </header>
+           
+           <nav>
+            <ul><br><br>
+                <li>
+                    <a id="img_note" style="font-weight:bold">
+                        Show image description
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a id="about_me" style="font-weight:bold;">
+                        About Me ...
+                    </a>
+                </li>
+                <br>
+            </ul>
+           </nav>
+           
+           <display id="all_image_display">
+                <div id="display_region">
+                    <a id="previous_large" title="previous image">
+                        <img class="previous_image" src="texture/prev0.png" id="leftarrow"/>
+                    </a>
+                    <div class="large_image_div">
+                        <a href="images/00.jpg" target = "_blank" title="click to enlarge">
+                            <img class="large_img_img" id="placeholder" src="images/00.jpg" alt="my image gallery"/>
+                        </a>
+                        <p id="large_img_description">Click on an image thumbnail</p>
+                    </div>
+                    
+                    <a id="next_large" title="next image">
+                        <img class="next_image" src="texture/next0.png" id="rightarrow"/>
+                    </a>
+                </div>
+               
+               <div class="thumb_region">
+                   
+                   <a id="previous_thumb">
+                        <img class="previous_thumb_img" src="texture/left0.png" id="scroll_left_img">
+                    </a>
+                   
+                   <div ID="thumb_img_div">
+                <ul id="thumb_list_ul">
+                <li>
+                    <a href="images/01.jpg" img_note="A bald eagle" a_index = 0>
+                        <img class="thumb_img" src="images_thumb/01.jpg" alt="Eagle"  />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/02.jpg" img_note="An elephant in jungle" a_index = 0>
+                        <img src="images_thumb/02.jpg" alt="Elephant" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/03.jpg" img_note="Resting hummingbird" a_index = 0>
+                        <img src="images_thumb/03.jpg" alt="Bird" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/04.jpg" img_note="Tree shadow under sunset" a_index = 0>
+                        <img src="images_thumb/04.jpg" alt="Tree" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/05.jpg" img_note="Tree shadow under sunset" a_index = 0>
+                        <img src="images_thumb/05.jpg" alt="Tree" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/06.jpg" img_note="A red apple with leaves" a_index = 0>
+                        <img src="images_thumb/06.jpg" alt="Apple" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/07.jpg" img_note="A deep lake" a_index = 0>
+                        <img src="images_thumb/07.jpg" alt="Lake" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/08.jpg" img_note="Icicles dripping water" a_index = 0>
+                        <img src="images_thumb/08.jpg" alt="Icicle" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/09.jpg" img_note="Island and coconut trees" a_index = 0>
+                        <img src="images_thumb/09.jpg" alt="Island" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/10.jpg" img_note="Clock and coins" a_index = 0>
+                        <img src="images_thumb/10.jpg" alt="Clock" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/11.jpg" img_note="An interesting mushroom" a_index = 0>
+                        <img src="images_thumb/11.jpg" alt="Mushroom" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/12.jpg" img_note="Pumpkin soup" a_index = 0>
+                        <img src="images_thumb/12.jpg" alt="Pumpkin soup" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/13.jpg" img_note="Red roses on marble" a_index = 0>
+                        <img src="images_thumb/13.jpg" alt="Rose" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/14.jpg" img_note="Spaghetti on fork" a_index = 0>
+                        <img src="images_thumb/14.jpg" alt="Spaghetti" />
+                    </a>
+                </li>
+                <li>
+                    <a href="images/15.jpg" img_note="Statue of Hercules" a_index = 0>
+                        <img src="images_thumb/15.jpg" alt="Statue" />
+                    </a>
+                </li>
+                </ul>
+                </div>
+                   
+                    <a id="next_thumb">
+                        <img class="next_thumb_img" src="texture/right0.png" id="scroll_right_img">
+                    </a>
+               </div>
+           </display>
+           <aboutMe id="about_me_div">
+               <p>
+                   <br><br>
+                   Hi there, my name is Xialin Zheng.<br><br> I'm graduated from University of Wollongong majored in Software Engineer and
+                     Multimedia Management. <br><br>I used to develop C++/MATLAB programs to find paths, recognize road signs etc, but
+                    what I'm most interested in is website front-end developing, and a designer would be my dream job. <br> This 
+                   webpage is my html/css/javascript work to prove my design and programming capability. <br><br><br>Contact me if you are interested!
+                   <br>zhengxialin1@gmail.com
+                   <br><br><br>
+               </p>
+           </aboutMe>
+           
+       </div>
+
+        <script src="scripts/show_img.js"></script>    
+    </body>
+</html>
