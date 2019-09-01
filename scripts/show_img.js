@@ -1,5 +1,5 @@
 /* global
-document, window, clearTimeout, setTimeout
+document, window, clearTimeout, setTimeout, setInterval
 */
 
 function moveElement(elementID, final_x, final_y, interval) {
@@ -105,14 +105,30 @@ function prepare_img() {
         
         var all_img_display = document.getElementById("all_image_display");
         var about_me_div = document.getElementById("about_me_div");
+        var p_bg_color = about_me_div.childNodes[1];
+
         about_me_flag = !about_me_flag;
+        var i = 0;
+        var j = 0;
         if (about_me_flag) {
             about_me.firstChild.nodeValue = "Back to gallery";
             all_img_display.style.display = "none";
             about_me_div.style.display = "block";
-        } else {
+            setInterval(function(){
+                if(i<0.5){
+                p_bg_color.style.backgroundColor = "rgba(255,255,255,"+i+")";
+                p_bg_color.style.borderRadius = j+"px";
+                i += 0.005;
+                j += 0.5;}
+                else {return false;}
+            },10); 
+        }
+
+        else {
             about_me.firstChild.nodeValue = "About Me ...";
             about_me_div.style.display = "none";
+            p_bg_color.style.backgroundColor = "rgba(255,255,255,0)";
+            p_bg_color.style.borderRadius = "0px";
             all_img_display.style.display = "block";
         }      
         return false;
